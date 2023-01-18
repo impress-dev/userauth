@@ -11,3 +11,5 @@ git submodule update --init --recursive
 ```
 
 **Important:** Restart Wappler after the above steps have been completed
+
+Note: The above has been tested on a Mac only - volunteers are welcome to create install steps/scripts for other platforms
