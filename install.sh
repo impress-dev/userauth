@@ -48,7 +48,7 @@ if [ -d "$1/views/userauth" ]
 then
     echo "INFO: views/userauth already exists so not re-adding as sub-module"
 else
-    echo "INFO: Adding userauth"
+    echo "INFO: Adding userauth-web"
     git submodule add --quiet https://github.com/impress-dev/userauth-web.git "$1/views/userauth"
 fi
 
@@ -68,12 +68,12 @@ else
     git submodule add --quiet https://github.com/impress-dev/userauth-css.git "$1/public/css/userauth"
 fi
 
-if [ -d "$1/app/api/userauth-api" ]
+if [ -d "$1/app/api/userauth" ]
 then
-    echo "INFO: app/api/userauth-api already exists so not re-adding as sub-module"
+    echo "INFO: app/api/userauth already exists so not re-adding as sub-module"
 else
     echo "INFO: Adding userauth-api"
-    git submodule add --quiet https://github.com/impress-dev/userauth-api.git "$1/app/api/userauth-api"
+    git submodule add --quiet https://github.com/impress-dev/userauth-api.git "$1/app/api/userauth"
 fi
 
 if [ ! -d "$1/app/modules/lib" ]
@@ -81,12 +81,12 @@ then
     mkdir -p "$1/app/modules/lib"
 fi
 
-if [ -d "$1/app/modules/lib/userauth-lib" ]
+if [ -d "$1/app/modules/lib/userauth" ]
 then
-    echo "INFO: app/modules/lib/userauth-lib already exists so not re-adding as sub-module"
+    echo "INFO: app/modules/lib/userauth already exists so not re-adding as sub-module"
 else
     echo "INFO: Adding userauth-lib"
-    git submodule add --quiet https://github.com/impress-dev/userauth-lib.git "$1/app/modules/lib/userauth-lib"
+    git submodule add --quiet https://github.com/impress-dev/userauth-lib.git "$1/app/modules/lib/userauth"
 fi
 
 if grep -Fq "userauth" "$1/app/config/routes.json"
