@@ -44,6 +44,10 @@ fi
 
 cd "$1"
 
+# Turn off these warnings:
+# warning: in the working copy of '.gitmodules', LF will be replaced by CRLF the next time Git touches it
+git config core.autocrlf true
+
 if [ -d "$1/views/userauth-web" ]
 then
     echo "INFO: views/userauth-web already exists so not re-adding as sub-module"
