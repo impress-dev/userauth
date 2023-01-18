@@ -49,7 +49,7 @@ then
     echo "INFO: views/userauth-web already exists so not re-adding as sub-module"
 else
     echo "INFO: Adding userauth-web"
-    git submodule add https://github.com/impress-dev/userauth-web.git "$1/views/userauth-web"
+    git submodule add --quiet https://github.com/impress-dev/userauth-web.git "$1/views/userauth-web"
 fi
 
 if [ -d "$1/views/layouts/userauth-web" ]
@@ -57,7 +57,7 @@ then
     echo "INFO: views/layouts/userauth-web already exists so not re-adding as sub-module"
 else
     echo "INFO: Adding userauth-layouts"
-    git submodule add https://github.com/impress-dev/userauth-layouts.git "$1/views/layouts/userauth-web"
+    git submodule add --quiet https://github.com/impress-dev/userauth-layouts.git "$1/views/layouts/userauth-web"
 fi
 
 if [ -d "$1/public/css/userauth-web" ]
@@ -65,7 +65,7 @@ then
     echo "INFO: public/css/userauth-web already exists so not re-adding as sub-module"
 else
     echo "INFO: Adding userauth-css"
-    git submodule add https://github.com/impress-dev/userauth-css.git "$1/public/css/userauth-web"
+    git submodule add --quiet https://github.com/impress-dev/userauth-css.git "$1/public/css/userauth-web"
 fi
 
 if [ -d "$1/app/api/userauth-api" ]
@@ -73,7 +73,7 @@ then
     echo "INFO: app/api/userauth-api already exists so not re-adding as sub-module"
 else
     echo "INFO: Adding userauth-api"
-    git submodule add https://github.com/impress-dev/userauth-api.git "$1/app/api/userauth-api"
+    git submodule add --quiet https://github.com/impress-dev/userauth-api.git "$1/app/api/userauth-api"
 fi
 
 if [ ! -d "$1/app/modules" ]
