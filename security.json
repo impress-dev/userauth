@@ -3,7 +3,7 @@
   "module": "auth",
   "action": "provider",
   "options": {
-    "secret": "wOSmkO8l9LRiJOF",
+    "secret": "xxxxxxxxxxxxxxx",
     "provider": "Database",
     "connection": "database",
     "passwordVerify": true,
