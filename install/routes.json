@@ -72,6 +72,6 @@
         "path": "/userauth/database-reset-success",
         "page": "userauth/database-reset-success",
         "layout": "userauth/database-reset-success"
-    },
+    }
   ]
 }
