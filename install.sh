@@ -118,14 +118,6 @@ else
     echo "WARNING: global.json already exists and so required ENV variables will need to be added manually"
 fi
 
-if [ -d "$1/app/modules/lib/userauth-lib" ]
-then
-    echo "INFO: app/modules/lib/userauth-lib already exists so not re-adding as sub-module"
-else
-    echo "INFO: Adding userauth-lib"
-    git submodule add https://github.com/impress-dev/userauth-lib.git "$1/app/modules/lib/userauth-lib"
-fi
-
 if [ -f "$1/app/modules/Mailer/mail.json" ]
 then
     echo "INFO: app/modules/Mailer/mail.json already exists so not re-adding"
