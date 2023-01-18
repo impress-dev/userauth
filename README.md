@@ -1,6 +1,6 @@
 # userauth
 
-To install all the necessary files used by userauth, run the following command:
+To install all the necessary files used by userauth into a Wappler project, run the following:
 
 **Important:** The target Wappler project must be in a git repo (local or remote)
 
