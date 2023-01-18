@@ -122,28 +122,28 @@ if [ -f "$1/app/modules/Mailer/mail.json" ]
 then
     echo "INFO: app/modules/Mailer/mail.json already exists so not re-adding"
 else
-    curl -s https://raw.githubusercontent.com/impress-dev/userauth/main/mail.json --output "$1/app/modules/Mailer/mail.json"
+    curl --create-dirs --silent https://raw.githubusercontent.com/impress-dev/userauth/main/mail.json --output "$1/app/modules/Mailer/mail.json"
 fi
 
 if [ -f "$1/.wappler/targets/Development/app/modules/Mailer/mail.json" ]
 then
     echo "INFO: .wappler/targets/Development/app/modules/Mailer/mail.json already exists so not re-adding"
 else
-    curl -s https://raw.githubusercontent.com/impress-dev/userauth/main/mail.json --output "$1/.wappler/targets/Development/app/modules/Mailer/mail.json"
+    curl --create-dirs --silent https://raw.githubusercontent.com/impress-dev/userauth/main/mail.json --output "$1/.wappler/targets/Development/app/modules/Mailer/mail.json"
 fi
 
 if [ -f "$1/app/modules/SecurityProviders/security.json" ]
 then
     echo "INFO: app/modules/SecurityProviders/security.json already exists so not re-adding"
 else
-    curl -s https://raw.githubusercontent.com/impress-dev/userauth/main/security.json --output "$1/app/modules/SecurityProviders/security.json"
+    curl --create-dirs --silent https://raw.githubusercontent.com/impress-dev/userauth/main/security.json --output "$1/app/modules/SecurityProviders/security.json"
 fi
 
 if [ -f "$1/.wappler/targets/Development/app/modules/SecurityProviders/security.json" ]
 then
     echo "INFO: .wappler/targets/Development/app/modules/SecurityProviders/security.json already exists so not re-adding"
 else
-    curl -s https://raw.githubusercontent.com/impress-dev/userauth/main/security.json --output "$1/.wappler/targets/Development/app/modules/SecurityProviders/security.json"
+    curl --create-dirs --silent https://raw.githubusercontent.com/impress-dev/userauth/main/security.json --output "$1/.wappler/targets/Development/app/modules/SecurityProviders/security.json"
 fi
 
 # For now I'm downloading all known Wappler dependencies (as Impress does not currently selectively include them)
@@ -151,128 +151,128 @@ fi
 
 if [ ! -f "$1/public/dmxAppConnect/dmxAppConnect.js" ]
 then
-    curl -s -o "$1/public/dmxAppConnect/dmxAppConnect.js" https://impress.dev/dmxAppConnect/dmxAppConnect.js
+    curl --create-dirs --silent https://impress.dev/dmxAppConnect/dmxAppConnect.js --output "$1/public/dmxAppConnect/dmxAppConnect.js"
 fi
 
 if [ ! -d "$1/public/dmxAppConnect/dmxAnimateCSS" ]
 then
-    curl --create-dirs -s -o "$1/public/dmxAppConnect/dmxAnimateCSS/animate.min.css" https://impress.dev/dmxAppConnect/dmxAnimateCSS/animate.min.css
-    curl --create-dirs -s -o "$1/public/dmxAppConnect/dmxAnimateCSS/dmxAnimateCSS.js" https://impress.dev/dmxAppConnect/dmxAnimateCSS/dmxAnimateCSS.js
+    curl --create-dirs --silent https://impress.dev/dmxAppConnect/dmxAnimateCSS/animate.min.css --output "$1/public/dmxAppConnect/dmxAnimateCSS/animate.min.css"
+    curl --create-dirs --silent https://impress.dev/dmxAppConnect/dmxAnimateCSS/dmxAnimateCSS.js --output "$1/public/dmxAppConnect/dmxAnimateCSS/dmxAnimateCSS.js"
 fi
 
 if [ ! -d "$1/public/dmxAppConnect/dmxBootbox5" ]
 then
-    curl --create-dirs -s -o "$1/public/dmxAppConnect/dmxBootbox5/bootstrap-modbox.min.js" https://impress.dev/dmxAppConnect/dmxBootbox5/bootstrap-modbox.min.js
-    curl --create-dirs -s -o "$1/public/dmxAppConnect/dmxBootbox5/dmxBootbox5.js" https://impress.dev/dmxAppConnect/dmxBootbox5/dmxBootbox5.js
+    curl --create-dirs --silent https://impress.dev/dmxAppConnect/dmxBootbox5/bootstrap-modbox.min.js --output "$1/public/dmxAppConnect/dmxBootbox5/bootstrap-modbox.min.js"
+    curl --create-dirs --silent https://impress.dev/dmxAppConnect/dmxBootbox5/dmxBootbox5.js --output "$1/public/dmxAppConnect/dmxBootbox5/dmxBootbox5.js"
 fi
 
 if [ ! -d "$1/public/dmxAppConnect/dmxBootstrap5Modal" ]
 then
-    curl --create-dirs -s -o "$1/public/dmxAppConnect/dmxBootstrap5Modal/dmxBootstrap5Modal.js" https://impress.dev/dmxAppConnect/dmxBootstrap5Modal/dmxBootstrap5Modal.js
+    curl --create-dirs --silent https://impress.dev/dmxAppConnect/dmxBootstrap5Modal/dmxBootstrap5Modal.js --output "$1/public/dmxAppConnect/dmxBootstrap5Modal/dmxBootstrap5Modal.js"
 fi
 
 if [ ! -d "$1/public/dmxAppConnect/dmxBrowser" ]
 then
-    curl --create-dirs -s -o "$1/public/dmxAppConnect/dmxBrowser/dmxBrowser.js" https://impress.dev/dmxAppConnect/dmxBrowser/dmxBrowser.js
+    curl --create-dirs --silent https://impress.dev/dmxAppConnect/dmxBrowser/dmxBrowser.js --output "$1/public/dmxAppConnect/dmxBrowser/dmxBrowser.js"
 fi
 
 if [ ! -d "$1/public/dmxAppConnect/dmxCharts" ]
 then
-    curl --create-dirs -s -o "$1/public/dmxAppConnect/dmxCharts/Chart.min.js" https://impress.dev/dmxAppConnect/dmxCharts/Chart.min.js
-    curl --create-dirs -s -o "$1/public/dmxAppConnect/dmxCharts/dmxCharts.js" https://impress.dev/dmxAppConnect/dmxCharts/dmxCharts.js
+    curl --create-dirs --silent https://impress.dev/dmxAppConnect/dmxCharts/Chart.min.js --output "$1/public/dmxAppConnect/dmxCharts/Chart.min.js"
+    curl --create-dirs --silent https://impress.dev/dmxAppConnect/dmxCharts/dmxCharts.js --output "$1/public/dmxAppConnect/dmxCharts/dmxCharts.js"
 fi
 
 if [ ! -d "$1/public/dmxAppConnect/dmxDatePicker" ]
 then
-    curl --create-dirs -s -o "$1/public/dmxAppConnect/dmxDatePicker/daterangepicker.min.css" https://impress.dev/dmxAppConnect/dmxDatePicker/daterangepicker.min.css
-    curl --create-dirs -s -o "$1/public/dmxAppConnect/dmxDatePicker/daterangepicker.min.js" https://impress.dev/dmxAppConnect/dmxDatePicker/daterangepicker.min.js
-    curl --create-dirs -s -o "$1/public/dmxAppConnect/dmxDatePicker/dmxDatePicker.css" https://impress.dev/dmxAppConnect/dmxDatePicker/dmxDatePicker.css
-    curl --create-dirs -s -o "$1/public/dmxAppConnect/dmxDatePicker/dmxDatePicker.js" https://impress.dev/dmxAppConnect/dmxDatePicker/dmxDatePicker.js
+    curl --create-dirs --silent https://impress.dev/dmxAppConnect/dmxDatePicker/daterangepicker.min.css --output "$1/public/dmxAppConnect/dmxDatePicker/daterangepicker.min.css"
+    curl --create-dirs --silent https://impress.dev/dmxAppConnect/dmxDatePicker/daterangepicker.min.js --output "$1/public/dmxAppConnect/dmxDatePicker/daterangepicker.min.js"
+    curl --create-dirs --silent https://impress.dev/dmxAppConnect/dmxDatePicker/dmxDatePicker.css --output "$1/public/dmxAppConnect/dmxDatePicker/dmxDatePicker.css"
+    curl --create-dirs --silent https://impress.dev/dmxAppConnect/dmxDatePicker/dmxDatePicker.js --output "$1/public/dmxAppConnect/dmxDatePicker/dmxDatePicker.js"
 fi
 
 if [ ! -d "$1/public/dmxAppConnect/dmxDownload" ]
 then
-    curl --create-dirs -s -o "$1/public/dmxAppConnect/dmxDownload/dmxDownload.js" https://impress.dev/dmxAppConnect/dmxDownload/dmxDownload.js
+    curl --create-dirs --silent https://impress.dev/dmxAppConnect/dmxDownload/dmxDownload.js --output "$1/public/dmxAppConnect/dmxDownload/dmxDownload.js"
 fi
 
 if [ ! -d "$1/public/dmxAppConnect/dmxDropzone" ]
 then
-    curl --create-dirs -s -o "$1/public/dmxAppConnect/dmxDropzone/dmxDropzone.css" https://impress.dev/dmxAppConnect/dmxDropzone/dmxDropzone.css
-    curl --create-dirs -s -o "$1/public/dmxAppConnect/dmxDropzone/dmxDropzone.js" https://impress.dev/dmxAppConnect/dmxDropzone/dmxDropzone.js
+    curl --create-dirs --silent https://impress.dev/dmxAppConnect/dmxDropzone/dmxDropzone.css --output "$1/public/dmxAppConnect/dmxDropzone/dmxDropzone.css"
+    curl --create-dirs --silent https://impress.dev/dmxAppConnect/dmxDropzone/dmxDropzone.js --output "$1/public/dmxAppConnect/dmxDropzone/dmxDropzone.js"
 fi
 
 if [ ! -d "$1/public/dmxAppConnect/dmxFormatter" ]
 then
-    curl --create-dirs -s -o "$1/public/dmxAppConnect/dmxFormatter/dmxFormatter.js" https://impress.dev/dmxAppConnect/dmxFormatter/dmxFormatter.js
+    curl --create-dirs --silent https://impress.dev/dmxAppConnect/dmxFormatter/dmxFormatter.js --output "$1/public/dmxAppConnect/dmxFormatter/dmxFormatter.js"
 fi
 
 if [ ! -d "$1/public/dmxAppConnect/dmxMediumEditor" ]
 then
-    curl --create-dirs -s -o "$1/public/dmxAppConnect/dmxMediumEditor/dmxMediumEditor.css" https://impress.dev/dmxAppConnect/dmxMediumEditor/dmxMediumEditor.css
-    curl --create-dirs -s -o "$1/public/dmxAppConnect/dmxMediumEditor/medium-editor.js" https://impress.dev/dmxAppConnect/dmxMediumEditor/medium-editor.js
+    curl --create-dirs --silent https://impress.dev/dmxAppConnect/dmxMediumEditor/dmxMediumEditor.css --output "$1/public/dmxAppConnect/dmxMediumEditor/dmxMediumEditor.css"
+    curl --create-dirs --silent https://impress.dev/dmxAppConnect/dmxMediumEditor/medium-editor.js --output "$1/public/dmxAppConnect/dmxMediumEditor/medium-editor.js"
 fi
 
 if [ ! -d "$1/public/dmxAppConnect/dmxNotifications" ]
 then
-    curl --create-dirs -s -o "$1/public/dmxAppConnect/dmxNotifications/dmxNotifications.css" https://impress.dev/dmxAppConnect/dmxNotifications/dmxNotifications.css
-    curl --create-dirs -s -o "$1/public/dmxAppConnect/dmxNotifications/dmxNotifications.js" https://impress.dev/dmxAppConnect/dmxNotifications/dmxNotifications.js
+    curl --create-dirs --silent https://impress.dev/dmxAppConnect/dmxNotifications/dmxNotifications.css --output "$1/public/dmxAppConnect/dmxNotifications/dmxNotifications.css"
+    curl --create-dirs --silent https://impress.dev/dmxAppConnect/dmxNotifications/dmxNotifications.js --output "$1/public/dmxAppConnect/dmxNotifications/dmxNotifications.js"
 fi
 
 if [ ! -d "$1/public/dmxAppConnect/dmxRouting" ]
 then
-    curl --create-dirs -s -o "$1/public/dmxAppConnect/dmxRouting/dmxRouting.js" https://impress.dev/dmxAppConnect/dmxRouting/dmxRouting.js
+    curl --create-dirs --silent https://impress.dev/dmxAppConnect/dmxRouting/dmxRouting.js --output "$1/public/dmxAppConnect/dmxRouting/dmxRouting.js"
 fi
 
 if [ ! -d "$1/public/dmxAppConnect/dmxScheduler" ]
 then
-    curl --create-dirs -s -o "$1/public/dmxAppConnect/dmxScheduler/dmxScheduler.js" https://impress.dev/dmxAppConnect/dmxScheduler/dmxScheduler.js
+    curl --create-dirs --silent https://impress.dev/dmxAppConnect/dmxScheduler/dmxScheduler.js --output "$1/public/dmxAppConnect/dmxScheduler/dmxScheduler.js"
 fi
 
 if [ ! -d "$1/public/dmxAppConnect/dmxStateManagement" ]
 then
-    curl --create-dirs -s -o "$1/public/dmxAppConnect/dmxStateManagement/dmxStateManagement.js" https://impress.dev/dmxAppConnect/dmxStateManagement/dmxStateManagement.js
+    curl --create-dirs --silent https://impress.dev/dmxAppConnect/dmxStateManagement/dmxStateManagement.js --output "$1/public/dmxAppConnect/dmxStateManagement/dmxStateManagement.js"
 fi
 
 if [ ! -d "$1/public/dmxAppConnect/dmxValidator" ]
 then
-    curl --create-dirs -s -o "$1/public/dmxAppConnect/dmxValidator/dmxValidator.css" https://impress.dev/dmxAppConnect/dmxValidator/dmxValidator.css
-    curl --create-dirs -s -o "$1/public/dmxAppConnect/dmxValidator/dmxValidator.js" https://impress.dev/dmxAppConnect/dmxValidator/dmxValidator.js
+    curl --create-dirs --silent https://impress.dev/dmxAppConnect/dmxValidator/dmxValidator.css --output "$1/public/dmxAppConnect/dmxValidator/dmxValidator.css"
+    curl --create-dirs --silent https://impress.dev/dmxAppConnect/dmxValidator/dmxValidator.js --output "$1/public/dmxAppConnect/dmxValidator/dmxValidator.js"
 fi
 
 if [ ! -d "$1/public/dmxAppConnect/dmxStateManagement" ]
 then
-    curl --create-dirs -s -o "$1/public/dmxAppConnect/dmxStateManagement/dmxStateManagement.js" https://impress.dev/dmxAppConnect/dmxStateManagement/dmxStateManagement.js
+    curl --create-dirs --silent https://impress.dev/dmxAppConnect/dmxStateManagement/dmxStateManagement.js --output "$1/public/dmxAppConnect/dmxStateManagement/dmxStateManagement.js"
 fi
 
 if [ ! -d "$1/public/dmxAppConnect/dmxSockets" ]
 then
-    curl --create-dirs -s -o "$1/public/dmxAppConnect/dmxSockets/dmxSockets.js" https://impress.dev/dmxAppConnect/dmxSockets/dmxSockets.js
+    curl --create-dirs --silent https://impress.dev/dmxAppConnect/dmxSockets/dmxSockets.js --output "$1/public/dmxAppConnect/dmxSockets/dmxSockets.js"
 fi
 
 if [ ! -d "$1/public/socket.io" ]
 then
-    curl --create-dirs -s -o "$1/public/socket.io/socket.io.js" https://impress.dev/socket.io/socket.io.js
+    curl --create-dirs --silent https://impress.dev/socket.io/socket.io.js --output "$1/public/socket.io/socket.io.js"
 fi
 
 if [ ! -d "$1/public/bootstrap/5" ]
 then
-    curl --create-dirs -s -o "$1/public/bootstrap/5/css/bootstrap.min.css" https://impress.dev/bootstrap/5/css/bootstrap.min.css
-    curl --create-dirs -s -o "$1/public/bootstrap/5/js/bootstrap.bundle.min.js" https://impress.dev/bootstrap/5/js/bootstrap.bundle.min.js
+    curl --create-dirs --silent https://impress.dev/bootstrap/5/css/bootstrap.min.css --output "$1/public/bootstrap/5/css/bootstrap.min.css"
+    curl --create-dirs --silent https://impress.dev/bootstrap/5/js/bootstrap.bundle.min.js --output "$1/public/bootstrap/5/js/bootstrap.bundle.min.js"
 fi
 
 if [ ! -d "$1/public/socket.io" ]
 then
-    curl --create-dirs -s -o "$1/public/socket.io/socket.io.js" https://impress.dev/socket.io/socket.io.js
+    curl --create-dirs --silent https://impress.dev/socket.io/socket.io.js --output "$1/public/socket.io/socket.io.js"
 fi
 
 if [ ! -d "$1/public/js/moment.js/2" ]
 then
-    curl --create-dirs -s -o "$1/public/js/moment.js/2/moment.min.js" https://impress.dev/js/moment.js/2/moment.min.js
+    curl --create-dirs --silent https://impress.dev/js/moment.js/2/moment.min.js --output "$1/public/js/moment.js/2/moment.min.js"
 fi
 
 if [ ! -f "$1/public/js/jquery-3.5.1.slim.min.js" ]
 then
-    curl --create-dirs -s -o "$1/public/js/jquery-3.5.1.slim.min.js" https://impress.dev/js/jquery-3.5.1.slim.min.js
+    curl --create-dirs --silent https://impress.dev/js/jquery-3.5.1.slim.min.js --output "$1/public/js/jquery-3.5.1.slim.min.js"
 fi
 
 cd -
