@@ -99,7 +99,7 @@ then
     echo "INFO: userauth-web already exists in routes.json so not re-adding routes"
 else
     head -n 2 "$1/app/config/routes.json" > "$1/app/config/routes.json.new"
-    curl -s https://raw.githubusercontent.com/impress-dev/userauth/main/userauth-routes.json.snippet >> "$1/app/config/routes.json.new"
+    curl -s https://raw.githubusercontent.com/impress-dev/userauth/main/routes.json.snippet >> "$1/app/config/routes.json.new"
     tail -n +3 "$1/app/config/routes.json" >> "$1/app/config/routes.json.new"
     ROUTES_BACKUP="$1/app/config/routes.json.$(date +"%Y%m%d-%H%M%S")"
     mv "$1/app/config/routes.json" "$ROUTES_BACKUP"
@@ -110,7 +110,7 @@ fi
 if [ ! -f "$1/app/modules/global.json" ]
 then
     echo "INFO: Adding global.json"
-    curl -s https://raw.githubusercontent.com/impress-dev/userauth/main/userauth-global.json --output "$1/app/modules/global.json"
+    curl -s https://raw.githubusercontent.com/impress-dev/userauth/main/global.json --output "$1/app/modules/global.json"
 elif grep -Fq "STEWARD_PASSWORD" "$1/app/modules/global.json"
 then
     echo "INFO: global.json already contains STEWARD_PASSWORD so not re-adding ENV variables"
