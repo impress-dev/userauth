@@ -122,6 +122,7 @@ if [ -f "$1/app/modules/Mailer/mail.json" ]
 then
     echo "INFO: app/modules/Mailer/mail.json already exists so not re-adding"
 else
+    echo "INFO: Adding mail.json"
     curl --create-dirs --silent https://raw.githubusercontent.com/impress-dev/userauth/main/mail.json --output "$1/app/modules/Mailer/mail.json"
 fi
 
@@ -134,6 +135,7 @@ fi
 
 if [ -f "$1/app/modules/SecurityProviders/security.json" ]
 then
+    echo "INFO: Adding security.json"
     echo "INFO: app/modules/SecurityProviders/security.json already exists so not re-adding"
 else
     curl --create-dirs --silent https://raw.githubusercontent.com/impress-dev/userauth/main/security.json --output "$1/app/modules/SecurityProviders/security.json"
@@ -149,6 +151,8 @@ fi
 # For now I'm downloading all known Wappler dependencies (as Impress does not currently selectively include them)
 # This will be cleaned up in a later release
 
+echo "INFO: Adding any missing dependencies"
+    
 if [ ! -f "$1/public/dmxAppConnect/dmxAppConnect.js" ]
 then
     curl --create-dirs --silent https://impress.dev/dmxAppConnect/dmxAppConnect.js --output "$1/public/dmxAppConnect/dmxAppConnect.js"
