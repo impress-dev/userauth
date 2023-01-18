@@ -44,28 +44,28 @@ fi
 
 cd "$1"
 
-if [ -d "$1/views/userauth-web" ]
+if [ -d "$1/views/userauth" ]
 then
-    echo "INFO: views/userauth-web already exists so not re-adding as sub-module"
+    echo "INFO: views/userauth already exists so not re-adding as sub-module"
 else
-    echo "INFO: Adding userauth-web"
-    git submodule add --quiet https://github.com/impress-dev/userauth-web.git "$1/views/userauth-web"
+    echo "INFO: Adding userauth"
+    git submodule add --quiet https://github.com/impress-dev/userauth-web.git "$1/views/userauth"
 fi
 
-if [ -d "$1/views/layouts/userauth-web" ]
+if [ -d "$1/views/layouts/userauth" ]
 then
-    echo "INFO: views/layouts/userauth-web already exists so not re-adding as sub-module"
+    echo "INFO: views/layouts/userauth already exists so not re-adding as sub-module"
 else
     echo "INFO: Adding userauth-layouts"
-    git submodule add --quiet https://github.com/impress-dev/userauth-layouts.git "$1/views/layouts/userauth-web"
+    git submodule add --quiet https://github.com/impress-dev/userauth-layouts.git "$1/views/layouts/userauth"
 fi
 
-if [ -d "$1/public/css/userauth-web" ]
+if [ -d "$1/public/css/userauth" ]
 then
-    echo "INFO: public/css/userauth-web already exists so not re-adding as sub-module"
+    echo "INFO: public/css/userauth already exists so not re-adding as sub-module"
 else
     echo "INFO: Adding userauth-css"
-    git submodule add --quiet https://github.com/impress-dev/userauth-css.git "$1/public/css/userauth-web"
+    git submodule add --quiet https://github.com/impress-dev/userauth-css.git "$1/public/css/userauth"
 fi
 
 if [ -d "$1/app/api/userauth-api" ]
@@ -89,9 +89,9 @@ else
     git submodule add --quiet https://github.com/impress-dev/userauth-lib.git "$1/app/modules/lib/userauth-lib"
 fi
 
-if grep -Fq "userauth-web" "$1/app/config/routes.json"
+if grep -Fq "userauth" "$1/app/config/routes.json"
 then
-    echo "INFO: userauth-web already exists in routes.json so not re-adding routes"
+    echo "INFO: userauth already exists in routes.json so not re-adding routes"
 else
     head -n 2 "$1/app/config/routes.json" > "$1/app/config/routes.json.new"
     curl -s https://raw.githubusercontent.com/impress-dev/userauth/main/routes.json.snippet >> "$1/app/config/routes.json.new"
@@ -281,5 +281,5 @@ echo ">>> Next steps (to be done in Wappler): <<<"
 echo "1. Restart Wappler to pick up all changes"
 echo "2. Create a Postgres Database connection called 'database'"
 echo "3. Set a value for STEWARD_PASSWORD env variable in Workflows->Server Connect Settings->Environment"
-echo "4. Open Site Manager->Pages->userauth-web/login and press the 'Open in Browser' button"
+echo "4. Open Site Manager->Pages->userauth/login and press the 'Open in Browser' button"
 echo
