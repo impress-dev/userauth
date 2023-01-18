@@ -275,3 +275,10 @@ then
 fi
 
 cd -
+
+echo "Next steps (to be done in Wappler):"
+echo "1. Restart Wappler to pick up all changes"
+echo "2. Create a Postgres Database connection called 'database'"
+echo "3. Set a value for STEWARD_PASSWORD env variable in Workflows->Server Connect Settings->Environment"
+echo "4. Open Site Manager->Pages->userauth-web/login and press the 'Open in Browser' button"
+
