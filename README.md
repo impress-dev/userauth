@@ -8,6 +8,4 @@ To install all the necessary files used by userauth, run the following command:
 curl -s https://raw.githubusercontent.com/impress-dev/userauth/main/install.sh | sh -s "<path to Wappler project>"
 ```
 
-**Important:** Restart Wappler after the above steps have been completed
-
-Note: The above has been tested on a Mac only - volunteers are welcome to create install steps/scripts for other platforms
+Note: This has been tested on a Mac only - volunteers are welcome to create install steps/scripts for other platforms
