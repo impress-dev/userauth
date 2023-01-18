@@ -1,8 +1,8 @@
 # userauth
 
-To install userauth into a Wappler project, run the following:
+To add userauth to a Wappler project, run the following:
 
-**Important:** The target Wappler project must be in a git repo (local or remote)
+**Important:** The target Wappler project must be in a (local or remote) git repo
 
 ```
 curl -s https://raw.githubusercontent.com/impress-dev/userauth/main/install/install.sh | sh -s "<path to Wappler project>"
