@@ -209,6 +209,8 @@ fi
 if [ ! -d "$1/public/dmxAppConnect/dmxMediumEditor" ]
 then
     curl --create-dirs --silent https://impress.dev/dmxAppConnect/dmxMediumEditor/dmxMediumEditor.css --output "$1/public/dmxAppConnect/dmxMediumEditor/dmxMediumEditor.css"
+    curl --create-dirs --silent https://impress.dev/dmxAppConnect/dmxMediumEditor/dmxMediumEditor.js --output "$1/public/dmxAppConnect/dmxMediumEditor/dmxMediumEditor.js"
+    curl --create-dirs --silent https://impress.dev/dmxAppConnect/dmxMediumEditor/medium-editor.css --output "$1/public/dmxAppConnect/dmxMediumEditor/medium-editor.css"
     curl --create-dirs --silent https://impress.dev/dmxAppConnect/dmxMediumEditor/medium-editor.js --output "$1/public/dmxAppConnect/dmxMediumEditor/medium-editor.js"
 fi
 
