@@ -94,7 +94,7 @@ then
     echo "INFO: userauth already exists in routes.json so not re-adding routes"
 else
     head -n 2 "$1/app/config/routes.json" > "$1/app/config/routes.json.new"
-    curl -s https://raw.githubusercontent.com/impress-dev/userauth/main/routes.json.snippet >> "$1/app/config/routes.json.new"
+    curl -s https://raw.githubusercontent.com/impress-dev/userauth/main/routes.json | tail -n +3 | tail -r | tail +3 | tail -r >> "$1/app/config/routes.json.new"
     tail -n +3 "$1/app/config/routes.json" >> "$1/app/config/routes.json.new"
     ROUTES_BACKUP="$1/app/config/routes.json.$(date +"%Y%m%d-%H%M%S")"
     mv "$1/app/config/routes.json" "$ROUTES_BACKUP"
