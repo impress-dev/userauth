@@ -10,7 +10,7 @@
         "path": "/userauth/manage",
         "page": "userauth/manage",
         "layout": "userauth/manage",
-        "exec": "/api/userauth/account/authorize_admin"
+        "exec": "/api/userauth/admin/authorize"
     },
     {
         "path": "/userauth/info",
