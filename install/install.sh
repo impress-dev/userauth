@@ -126,22 +126,26 @@ if [ -f "$1/.wappler/targets/Development/app/modules/Mailer/mail.json" ];
 then
     echo "INFO: .wappler/targets/Development/app/modules/Mailer/mail.json already exists so not re-adding"
 else
-    curl --create-dirs --silent https://raw.githubusercontent.com/impress-dev/userauth/main/install/mail.json --output "$1/.wappler/targets/Development/app/modules/Mailer/mail.json"
+    mkdir -p "$1/.wappler/targets/Development/app/modules/Mailer/"
+    cp "$1/app/modules/Mailer/mail.json" "$1/.wappler/targets/Development/app/modules/Mailer/mail.json"
 fi
 
 if [ -f "$1/app/modules/SecurityProviders/security.json" ];
 then
-    echo "INFO: Adding security.json"
     echo "INFO: app/modules/SecurityProviders/security.json already exists so not re-adding"
 else
+    echo "INFO: Adding security.json"
     curl --create-dirs --silent https://raw.githubusercontent.com/impress-dev/userauth/main/install/security.json --output "$1/app/modules/SecurityProviders/security.json"
+    RND=`LC_ALL=C tr -dc 'A-Za-z0-9' </dev/urandom | head -c 15 ; echo ''`
+    sed -i '' "s/xxxxxxxxxxxxxxx/$RND/" "$1/app/modules/SecurityProviders/security.json"
 fi
 
 if [ -f "$1/.wappler/targets/Development/app/modules/SecurityProviders/security.json" ];
 then
     echo "INFO: .wappler/targets/Development/app/modules/SecurityProviders/security.json already exists so not re-adding"
 else
-    curl --create-dirs --silent https://raw.githubusercontent.com/impress-dev/userauth/main/install/security.json --output "$1/.wappler/targets/Development/app/modules/SecurityProviders/security.json"
+    mkdir -p "$1/.wappler/targets/Development/app/modules/SecurityProviders/"
+    cp "$1/app/modules/SecurityProviders/security.json" "$1/.wappler/targets/Development/app/modules/SecurityProviders/security.json"
 fi
 
 # For now I'm downloading all known Wappler dependencies (as Impress does not currently selectively include them)
