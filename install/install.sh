@@ -26,7 +26,7 @@ fi
 
 if [ ! -d "$1/views/layouts" ];
 then
-    echo "The supplied parameter is not a valid Wappler project (missing views/layous folder)"
+    echo "The supplied parameter is not a valid Wappler project (missing views/layouts folder)"
     exit 1
 fi
 
