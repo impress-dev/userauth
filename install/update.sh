@@ -78,27 +78,27 @@ fi
 
 echo "Upgrading views/userauth"
 cd "$1/views/userauth"
-git pull
+git pull origin main
 cd ~-
 
 echo "Upgrading views/layouts/userauth"
 cd "$1/views/layouts/userauth"
-git pull
+git pull origin main
 cd ~-
 
 echo "Upgrading public/css/userauth"
 cd "$1/public/css/userauth"
-git pull
+git pull origin main
 cd ~-
 
 echo "Upgrading app/api/userauth"
 cd "$1/app/api/userauth"
-git pull
+git pull origin main
 cd ~-
 
 echo "Upgrading app/modules/lib/userauth"
 cd "$1/app/modules/lib/userauth"
-git pull
+git pull origin main
 cd ~-
 
 echo
