@@ -31,3 +31,6 @@ Note: This has been tested on a Mac only - volunteers are welcome to offer up in
 1. Add and commit the submodule updates to your git project
 2. Enjoy the update
 
+## Updates
+
+### 2023-03-28 - Rename column used in user_permissions (was referencing id columnd and not userid)
