@@ -16,7 +16,7 @@
     "permissions": {
       "admin": {
         "table": "user_permissions",
-        "identity": "id",
+        "identity": "userid",
         "conditions": [
           {
             "column": "role",
