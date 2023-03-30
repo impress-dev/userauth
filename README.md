@@ -33,6 +33,7 @@ Note: This has been tested on a Mac only - volunteers are welcome to offer up in
 
 ## Updates
 
+2023-03-30 - Fix typo in conditional logic for USERAUTH_PASSWORD_CHANGE_API env var override
 2023-03-30 - Switch password change/reset to use Library modules
 2023-03-28 - Rename column used in user_permissions (was referencing id column and not userid)  
 2023-03-28 - Fix broken link in password reset URL
