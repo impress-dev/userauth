@@ -56,10 +56,10 @@ RECAPTCHA_SECRET_KEY - optional recaptcha secret key
 RECAPTCHA_SITE_KEY - optional recaptcha site key
   
 ### Email (SMTP) provider - email is sent only when all are present
-EMAIL_SENDER - value in the From: field of the email
-EMAIL_SMTP_USER - username of SMTP account
-EMAIL_SMTP_PASSWORD - password of SMTP account
-EMAIL_SMTP_HOST - host of SMTP account
+EMAIL_SENDER - value in the From: field of the email  
+EMAIL_SMTP_USER - username of SMTP account  
+EMAIL_SMTP_PASSWORD - password of SMTP account  
+EMAIL_SMTP_HOST - host of SMTP account  
 EMAIL_SMTP_PORT - port of SMTP account
 
 ## Updates
