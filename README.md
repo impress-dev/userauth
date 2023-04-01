@@ -34,12 +34,12 @@ Note: This has been tested on a Mac only - volunteers are welcome to offer up in
 ## Wappler environment variable overrides
 
 ### End points
-USERAUTH_DATABASE_RESET_API - endpoint that is called for a database reset  
 USERAUTH_LOGIN_API - endpoint that is called for login  
 USERAUTH_REGISTER_API - endpoint that is called for registration  
 USERAUTH_PASSWORD_CHANGE_API - endpoint that is called for a password change  
 USERAUTH_PASSWORD_RESET_REQUEST_API - endpoint that is called for a password reset request  
 USERAUTH_PASSWORD_RESET_API - endpoint that is called to reset a password  
+USERAUTH_DATABASE_RESET_API - endpoint that is called for a database reset 
 
 ### Messages
 USERAUTH_LOGIN_MESSAGE - message content shown on login page  
