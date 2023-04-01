@@ -31,7 +31,39 @@ Note: This has been tested on a Mac only - volunteers are welcome to offer up in
 1. Add and commit the submodule updates to your git project
 2. Enjoy the update
 
+## Wappler environment variable overrides
+
+### End points
+USERAUTH_DATABASE_RESET_API - endpoint that is called for a database reset
+USERAUTH_LOGIN_API - endpoint that is called for login
+USERAUTH_REGISTER_API - endpoint that is called for registration
+USERAUTH_PASSWORD_CHANGE_API - endpoint that is called for a password change
+USERAUTH_PASSWORD_RESET_REQUEST_API - endpoint that is called for a password reset request
+USERAUTH_PASSWORD_RESET_API - endpoint that is called to reset a password
+
+### Messages
+USERAUTH_LOGIN_MESSAGE - message content shown on login page  
+USERAUTH_REGISTER_MESSAGE - message content shown on registration page  
+USERAUTH_PASSWORD_CHANGE_MESSAGE - message content shown on password change page  
+USERAUTH_PASSWORD_RESET_REQUEST_MESSAGE - message content shown on password reset request page  
+USERAUTH_PASSWORD_RESET_MESSAGE - message content shown on password reset page  
+
+### Page redirects
+USERAUTH_LOGIN_SUCCESS_PAGE - page/URL that is redirected to after a successful login  
+
+### Recaptcha keys - recaptcha box is shown only when both are present
+RECAPTCHA_SECRET_KEY - optional recaptcha secret key
+RECAPTCHA_SITE_KEY - optional recaptcha site key
+  
+### Email (SMTP) provider - email is sent only when all are present
+EMAIL_SENDER - value in the From: field of the email
+EMAIL_SMTP_USER - username of SMTP account
+EMAIL_SMTP_PASSWORD - password of SMTP account
+EMAIL_SMTP_HOST - host of SMTP account
+EMAIL_SMTP_PORT - port of SMTP account
+
 ## Updates
+2023-04-01 - Insert environment variable override documentation
 2023-04-01 - Add USERAUTH_LOGIN_SUCCESS_PAGE env var for optional redirect target after login  
 2023-03-30 - Fix typo in conditional logic for USERAUTH_PASSWORD_CHANGE_API env var override  
 2023-03-30 - Switch password change/reset to use Library modules  
