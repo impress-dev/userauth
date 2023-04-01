@@ -32,7 +32,6 @@ Note: This has been tested on a Mac only - volunteers are welcome to offer up in
 2. Enjoy the update
 
 ## Updates
-USERAUTH_LOGIN_SUCCESS_PAGE
 2023-04-01 - Add USERAUTH_LOGIN_SUCCESS_PAGE env var for optional redirect target after login  
 2023-03-30 - Fix typo in conditional logic for USERAUTH_PASSWORD_CHANGE_API env var override  
 2023-03-30 - Switch password change/reset to use Library modules  
