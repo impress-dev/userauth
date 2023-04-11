@@ -17,6 +17,8 @@ Note: This has been tested on a Mac only - volunteers are welcome to offer up in
 3. Set a value for STEWARD_PASSWORD env variable in Workflows->Server Connect Settings->Environment
 4. Open Site Manager->Pages->userauth/login and press the 'Open in Browser' button
 
+Here's a video walkthrough of the set up process: 
+https://www.youtube.com/watch?v=tFGXziLDf2I&ab_channel=ImpressDev
 
 ## To update the userauth modules:
 
