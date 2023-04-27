@@ -64,7 +64,11 @@ EMAIL_SMTP_PASSWORD - password of SMTP account
 EMAIL_SMTP_HOST - host of SMTP account  
 EMAIL_SMTP_PORT - port of SMTP account
 
+### Other
+USERAUTH_DISABLE_REGISTRATIONS - turn off registrations: true/false(default)
+
 ## Updates
+2023-04-27 - Add USERAUTH_DISABLE_REGISTRATIONS env var
 2023-04-18 - Small tidy up of includes (more work needed to be done here)  
 2023-04-03 - Fix date format issue on admin console  
 2023-04-01 - Add environment variable override documentation  
