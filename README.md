@@ -1,5 +1,7 @@
 # userauth
 
+Userauth is an open source project that adds user authorisation and authentication capability (including login/password reset/user management/analytics screens) to a Wappler project.
+
 ## To add userauth to a Wappler project
 
 ### Run the following:
