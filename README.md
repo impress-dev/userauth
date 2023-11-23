@@ -35,6 +35,23 @@ Note: This has been tested on a Mac only - volunteers are welcome to offer up in
 1. Add and commit the submodule updates to your git project
 2. Enjoy the update
 
+## To re-add submodules to a project that has been cloned using Wappler (submodules are not downloaded by default)
+
+### Run the following:
+
+```
+cd "<path-to-Wappler-project>"
+git submodule update --init
+```
+
+If you clone the project via the command line (and not added as a new Git project in Wappler) then you can add the --recurse-submodules option as part of the clone:
+
+```
+git clone --recurse-submodules [repository-name]
+```
+
+Note: this is currently untested but I added it as I thought it would be useful (source: https://phoenixnap.com/kb/git-pull-submodule)
+
 ## Wappler environment variable overrides
 
 ### End points
@@ -70,6 +87,7 @@ EMAIL_SMTP_PORT - port of SMTP account
 USERAUTH_DISABLE_REGISTRATIONS - turn off registrations: true/false(default)
 
 ## Updates
+2023-11-23 - Add instructions regarding git projects using userauth which are opened as new Wappler projects
 2023-04-27 - Add USERAUTH_DISABLE_REGISTRATIONS env var  
 2023-04-18 - Small tidy up of includes (more work needs to be done here)  
 2023-04-03 - Fix date format issue on admin console  
