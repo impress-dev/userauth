@@ -37,6 +37,8 @@ Note: This has been tested on a Mac only - volunteers are welcome to offer up in
 
 ## To re-add submodules to a project that has been cloned using Wappler (submodules are not downloaded by default)
 
+After creating a new project in Wappler based off a git repo, you might find that userauth login doesn't work as the userauth sub-modules are not downloaded as part of the git clone that Wappler does.
+
 ### Run the following:
 
 ```
@@ -44,13 +46,13 @@ cd "<path-to-Wappler-project>"
 git submodule update --init
 ```
 
-If you clone the project via the command line (and not added as a new Git project in Wappler) then you can add the --recurse-submodules option as part of the clone:
+If you clone the project via the command line (and not add it as a new Git project in Wappler) then you can add the --recurse-submodules option as part of the clone:
 
 ```
 git clone --recurse-submodules [repository-name]
 ```
 
-Note: this is currently untested but I added it as I thought it would be useful (source: https://phoenixnap.com/kb/git-pull-submodule)
+Note: the --recurse-submodules option is currently untested but I added it as I thought it would be useful (source: https://phoenixnap.com/kb/git-pull-submodule)
 
 ## Wappler environment variable overrides
 
