@@ -13,6 +13,12 @@
         "exec": "/api/userauth/admin/authorize"
     },
     {
+        "path": "/userauth/dashboard",
+        "page": "userauth/dashboard",
+        "layout": "userauth/dashboard",
+        "exec": "/api/userauth/admin/authorize"
+    },
+    {
         "path": "/userauth/info",
         "page": "userauth/info",
         "layout": "userauth/info"
