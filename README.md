@@ -90,7 +90,7 @@ EMAIL_NOTIFICATION_ADDRESS - address which receives email notifications (such as
 USERAUTH_DISABLE_REGISTRATIONS - turn off registrations: true/false(default)
 
 ## Updates
-2023-12-05 - Add EMAIL_NOTIFICATION_ADDRESS env var
+2023-12-05 - Add EMAIL_NOTIFICATION_ADDRESS env var  
 2023-11-27 - Add new dashboard page with charts  
 2023-11-25 - Clean up dependencies and improve mobile view  
 2023-11-23 - Add instructions regarding git projects using userauth which are opened as new Wappler projects  
