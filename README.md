@@ -83,12 +83,14 @@ EMAIL_SENDER - value in the From: field of the email
 EMAIL_SMTP_USER - username of SMTP account  
 EMAIL_SMTP_PASSWORD - password of SMTP account  
 EMAIL_SMTP_HOST - host of SMTP account  
-EMAIL_SMTP_PORT - port of SMTP account
+EMAIL_SMTP_PORT - port of SMTP account  
+EMAIL_NOTIFICATION_ADDRESS - address which receives email notifications (such as new user registration notifications)
 
 ### Other
 USERAUTH_DISABLE_REGISTRATIONS - turn off registrations: true/false(default)
 
 ## Updates
+2023-12-05 - Add EMAIL_NOTIFICATION_ADDRESS env var
 2023-11-27 - Add new dashboard page with charts  
 2023-11-25 - Clean up dependencies and improve mobile view  
 2023-11-23 - Add instructions regarding git projects using userauth which are opened as new Wappler projects  
