@@ -32,6 +32,10 @@
       {
         "type": "text",
         "name": "EMAIL_SMTP_PORT"
+      },
+      {
+        "type": "text",
+        "name": "EMAIL_NOTIFICATION_ADDRESS"
       }
     ]
   },
