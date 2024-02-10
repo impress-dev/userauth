@@ -90,6 +90,7 @@ EMAIL_NOTIFICATION_ADDRESS - address which receives email notifications (such as
 USERAUTH_DISABLE_REGISTRATIONS - turn off registrations: true/false(default)
 
 ## Updates
+2024-02-10 - Fix bug in conditional logic showing reCAPTCHA  
 2023-12-05 - Add EMAIL_NOTIFICATION_ADDRESS env var  
 2023-11-27 - Add new dashboard page with charts  
 2023-11-25 - Clean up dependencies and improve mobile view  
